@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ceshi/monitor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-ceres/ceres" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/monitor/monitor" vcs="Git" />
   </component>
 </project>

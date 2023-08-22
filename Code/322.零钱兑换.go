@@ -6,38 +6,36 @@
 //)
 //
 //func coinChange(coins []int, amount int) int {
-//	n := len(coins)
-//	dp := make([][]int, amount+1)
+//	if amount == 0 {
+//		return 0
+//	}
 //	sort.Slice(coins, func(i, j int) bool {
 //		return coins[i] < coins[j]
 //	})
+//	n := len(coins)
+//	temp := make([]int, 0)
+//	for i := 0; i <= n; i++ {
+//		temp = append(temp, amount+1)
+//	}
+//	dp := make([][]int, amount+1)
 //	for i := 0; i <= amount; i++ {
-//		dp[i] = make([]int, n+1)
-//		for j := 0; j <= n; j++ {
-//			dp[i][j] = amount + 2
-//		}
-//
+//		dp[i] = append(dp[i], temp...)
 //	}
 //	for i := 0; i <= n; i++ {
 //		dp[0][i] = 0
 //	}
-//
-//	for i := 1; i <= amount; i++ {
+//	for i := 1; i < amount+1; i++ {
 //		for j := 1; j <= n; j++ {
 //			if i < coins[j-1] {
 //				dp[i][j] = dp[i][j-1]
 //			} else {
 //				dp[i][j] = min(dp[i][j-1], dp[i-coins[j-1]][j]+1)
-//
 //			}
-//		}
 //
+//		}
 //	}
-//	for _, v := range dp {
-//		fmt.Println(v)
-//	}
-//	if dp[amount][n] == amount+2 {
-//		return -1
+//	if dp[amount][n] == amount+1 {
+//		return 0
 //	}
 //	return dp[amount][n]
 //}
